@@ -4,6 +4,7 @@ import {
 
 const styles = StyleSheet.create({
   swipeout: {
+    backgroundColor: '#dbddde',
     overflow: 'hidden',
   },
   swipeoutBtnTouchable: {

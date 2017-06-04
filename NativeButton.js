@@ -1,7 +1,6 @@
 import React, {
   PropTypes,
 } from 'react';
-import Icon from 'react-native-vector-icons/Ionicons';
 
 import {
   TouchableWithoutFeedback,
@@ -59,7 +58,7 @@ const NativeButton = React.createClass({
     }
 
     return (
-      <Text style={ [ styles.textButton, this.props.textStyle ]} ellipsizeMode="clip" numberOfLines={1} >
+      <Text style={ [ styles.textButton, this.props.textStyle ] }>
         { this.props.children }
       </Text>
     );
@@ -108,9 +107,7 @@ const NativeButton = React.createClass({
         {...buttonProps}
         style={[styles.button, this.props.style, disabledStyle]}
         underlayColor={ this.props.underlayColor }>
-        <View style={{ flexDirection: 'row' }}>
-          <Icon name={this.props.type === 'delete' ? 'ios-trash' : 'ios-brush'} size={25} color="white" style={{marginRight: 2}} />
-        </View>
+        { this._renderText() }
       </TouchableHighlight>
     );
   }
